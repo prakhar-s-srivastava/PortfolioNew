@@ -8,3 +8,10 @@ background: #F0F0F3;
 box-shadow:  11px 11px 14px #afafb1,
              -11px -11px 14px #ffffff;
 }
+
+.neomorphics-down{
+    border-radius: 10px;
+background: #F0F0F3;
+box-shadow: inset 2px 2px 5px #c2c2c5,
+            inset -2px -2px 5px #ffffff;
+}
