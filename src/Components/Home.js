@@ -46,7 +46,7 @@ function Home() {
             I love creating and innovating. Fond of interactive technologies
             since the begnning I have worked on Game Development, Computer
             Graphics and Machine Lerning. During my collage years at IIT Roorkee
-            I was part of clubs like Design Studio and Dramatics pushing me
+            I was part of clubs and societies like Design Studio and Dramatics pushing me
             forward towards innovation and a creative lifestyle.
           </div>
         </div>
