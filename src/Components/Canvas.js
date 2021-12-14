@@ -12,7 +12,7 @@ const Canvas = (props) => {
     draw1();
   }, []);
 
-  return <canvas ref={canvasRef} {...props} id="canvas" resize="true" className="neomorphics-up"/>;
+  return <canvas ref={canvasRef} {...props} id="canvas" resize="true" className="neomorphics-up canvas-div"/>;
 };
 
 export default Canvas;

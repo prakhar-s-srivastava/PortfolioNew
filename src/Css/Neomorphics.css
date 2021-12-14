@@ -3,8 +3,8 @@
 }
 
 .neomorphics-up{
-    border-radius: 15px;
+    border-radius: 10px;
 background: #F0F0F3;
-box-shadow:  11px 11px 22px #c2c2c5,
-             -11px -11px 22px #ffffff;
+box-shadow:  11px 11px 14px #afafb1,
+             -11px -11px 14px #ffffff;
 }
