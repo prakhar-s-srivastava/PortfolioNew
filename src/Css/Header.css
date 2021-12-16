@@ -1,0 +1,48 @@
+
+ul{
+    margin: auto;
+    left: 50%;
+    list-style-type: none;
+    border-radius: 10px;
+    transform: translate(-5%, 0%);
+    color: #6A41AC;
+}
+
+li {
+    background-color: transparent;
+  float: left;
+}
+
+li a {
+    background-color: transparent;
+  display: block;
+  color: #6A41AC;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+
+}
+.selected {
+      border-radius: 12px;
+  box-shadow: 0 10px 0 0 #6A41AC;
+}
+
+#header
+{
+    height: 18%;
+    margin-top: 1.5%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header_right {
+     alignSelf: left;
+            float: right;
+            display: flex;
+            textAlign : center;
+            alignItems : center;
+            justifyContent: center;
+            border-radius: 10px;
+            
+}

@@ -1,6 +1,7 @@
 import Canvas from "./Canvas";
 import "../Css/Neomorphics.css"
 import "../Css/Home.css"
+import "../Css/Header.css"
 import prakhar from "../Res/Prakhar.png"
 import logo from "../Res/logo.svg"
 
@@ -31,6 +32,29 @@ function Home() {
             Prakhar Srivastava
           </h3>
         </div>
+        <div
+          className="neomorphics-up"
+          style={{
+            alignSelf: "left",
+            float: "right",
+            padding : "1%"
+          }}
+        >
+          <ul>
+            <li className="selected">
+              <a> Home</a>
+            </li>
+            <li>
+              <a> Projects</a>
+            </li>
+            <li>
+              <a> About Me</a>
+            </li>
+            <li>
+              <a> Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <Canvas />
       <div className="canvas-div">
@@ -46,8 +70,8 @@ function Home() {
             I love creating and innovating. Fond of interactive technologies
             since the begnning I have worked on Game Development, Computer
             Graphics and Machine Lerning. During my collage years at IIT Roorkee
-            I was part of clubs and societies like Design Studio and Dramatics pushing me
-            forward towards innovation and a creative lifestyle.
+            I was part of clubs and societies like Design Studio and Dramatics
+            pushing me forward towards innovation and a creative lifestyle.
           </div>
         </div>
       </div>
