@@ -110,8 +110,9 @@ class Flocker {
     this.mousePosition = new Paper.Point();
     Paper.view.onMouseEnter = this.mouseClick;
     Paper.view.onMouseLeave = (event) => { this.clicked = false; }
-    console.log("DPI" + Paper.view.pixelRatio);
-    console.log("Device DPI" + window.devicePixelRatio);
+    console.log("DPI" + Paper.view.viewSize);
+    console.log("DPI" + Paper.view.size);
+    console.log("Device DPI" + window.innerWidth);
       
   }
 

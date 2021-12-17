@@ -10,7 +10,7 @@ const Canvas = (props) => {
    canvas = canvasRef.current;
     Paper.setup(canvas);
     draw1();
-   
+    
   }, []);
 
 
