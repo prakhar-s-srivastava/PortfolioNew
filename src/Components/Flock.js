@@ -171,7 +171,9 @@ class Flocker {
         mouseSeparation = e.triangle.position.subtract(this.mousePosition).multiply(1 / (1 + md));
       
       if(!this.clicked)
-      { e.velocity = e.velocity.add(mouseSeparation); }
+      {
+        // e.velocity = e.velocity.add(mouseSeparation);
+      }
       else
       {
         e.velocity = e.velocity.subtract(mouseSeparation);
