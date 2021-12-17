@@ -1,11 +1,30 @@
 import Paper from "paper";
 
+
+const colors = ["#FF5733", "#A675A1", "#FF9505", "#004F2D", "#23C9FF", "#4F5D75"];
 class Boid {
   constructor() {
 
-    this.triangle = new Paper.Path.RegularPolygon(new Paper.Point(80, 70), 3, 15);
-    this.triangle.fillColor = "#000000";
+    this.color = colors[Math.floor(Math.random() *colors.length)];
+    console.log(this.color);  
+     this.boidTrail = new Paper.Path({
+       strokeColor: /* "#341195"*/ this.color,
+       opacity: 0,
+       strokeWidth: 10,
+       dashArray: [4, 10],
+        strokeCap: "round",
+     });
+    // this.triangle = new Paper.Path.RegularPolygon(new Paper.Point(80, 70), 3, 15);
+    this.triangle = new Paper.Path();
+    this.triangle.add(new Paper.Point(-0.3, 0));
+    this.triangle.add(new Paper.Point(-1, 1));
+    this.triangle.add(new Paper.Point(2,0 ));
+    this.triangle.add(new Paper.Point(-1, -1));
+    this.triangle.scale(15);
+    this.triangle.closed =true;
+    this.triangle.fillColor = this.color;
     this.triangle.selected = false;
+    this.triangle.opacity = 0.8;
     this.triangle.position = new Paper.Point(
        500,
       500
@@ -13,7 +32,10 @@ class Boid {
     let a =this.forward(new Paper.Point(1, 0));
     this.triangle.rotate(a)
     this.triangle.applyMatrix = false;
-    this.velocity = new Paper.Point(Math.random()*2-1,Math.random()*2-1)
+    this.velocity = new Paper.Point(Math.random() * 2 - 1, Math.random() * 2 - 1)
+   
+    this.maxPoints = 50;
+    this.points = [];
   }
 
   forward(dir) {
@@ -27,16 +49,20 @@ class Boid {
   {
     // console.log(dis)
     this.triangle.position = this.triangle.position.add(dis);
-    this.triangle.rotation = (this.forward(dis)) - 30;
+    this.triangle.rotation = (this.forward(dis)) ;
+    let rem =false;
     if (this.triangle.position.x > Paper.view.size.width)
     {
-      this.triangle.position = new Paper.Point(0,this.triangle.position.y);
+      rem=true;
+      this.triangle.position = new Paper.Point(0, this.triangle.position.y);
     }
      if (this.triangle.position.y > Paper.view.size.height) {
-       this.triangle.position = new Paper.Point( this.triangle.position.x,0);
+       rem = true;
+       this.triangle.position = new Paper.Point(this.triangle.position.x, 0);
     }
     
      if (this.triangle.position.x <0) {
+       rem = true;
        this.triangle.position = new Paper.Point(
          Paper.view.size.width,
          this.triangle.position.y
@@ -44,11 +70,32 @@ class Boid {
     }
     
     if (this.triangle.position.y <0) {
+      rem = true;
       this.triangle.position = new Paper.Point(
         this.triangle.position.x,
         Paper.view.size.height
       );
     }
+
+    // if (rem)
+    // {
+    //   this.boidTrail.removeSegments(0, this.boidTrail.segments.length, true);
+    //   console.log("reached " + rem);  
+    //   this.points = [];
+    //   }
+
+    // if (this.points.length < this.maxPoints) {
+    //   this.points.push(this.triangle.position);
+    // } else {
+    //   this.points.shift();
+    //   this.points.push(this.triangle.position);
+    // }
+
+    // this.boidTrail.removeSegments(0, this.boidTrail.segments.length, true);
+    //  for (var i = 0; i < this.points.length; i++) {
+    //    this.boidTrail.add(this.points[i]);
+    //  }
+
   }
 }
 

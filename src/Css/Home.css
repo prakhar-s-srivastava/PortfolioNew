@@ -5,7 +5,7 @@
 
 
 *{
-    background: transparent;
+    /* background: transparent; */
 }
 
 .canvas-div
@@ -67,6 +67,7 @@
     height:100%;
     font-size:3vh; 
     margin-right: 1%; 
+    background: transparent;
 }
 
 
@@ -75,6 +76,7 @@
     margin-top:10%;
     font-family: Rubik;
     color:#341195;
+    background: transparent;
 
 }
 
@@ -88,6 +90,7 @@
     font-family: Rubik;
     font-size:400;
     color:#341195;
+    background: transparent;
 }
 
 #header

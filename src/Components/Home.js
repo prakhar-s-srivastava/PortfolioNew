@@ -96,7 +96,7 @@ function Home() {
         </div>
         <div id="left">
           <div id="intro"> Hi There, I am </div>
-          <div id="title" className="neomorphics-down">
+          <div id="title" className="neomorphics-up">
             Prakhar Srivastava
           </div>
           <div id="about_me">
