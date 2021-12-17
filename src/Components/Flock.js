@@ -6,7 +6,7 @@ class Boid {
   constructor() {
 
     this.color = colors[Math.floor(Math.random() *colors.length)];
-    console.log(this.color);  
+
      this.boidTrail = new Paper.Path({
        strokeColor: /* "#341195"*/ this.color,
        opacity: 0,
@@ -20,7 +20,7 @@ class Boid {
     this.triangle.add(new Paper.Point(-1, 1));
     this.triangle.add(new Paper.Point(2,0 ));
     this.triangle.add(new Paper.Point(-1, -1));
-    this.triangle.scale(15);
+    this.triangle.scale(8);
     this.triangle.closed =true;
     this.triangle.fillColor = this.color;
     this.triangle.selected = false;
@@ -41,13 +41,13 @@ class Boid {
   forward(dir) {
 
     
-    // console.log(dir.angle);
+   
     return (dir.angle);
   }
 
   move=(dis)=>
   {
-    // console.log(dis)
+ 
     this.triangle.position = this.triangle.position.add(dis);
     this.triangle.rotation = (this.forward(dis)) ;
     let rem =false;
@@ -80,7 +80,7 @@ class Boid {
     // if (rem)
     // {
     //   this.boidTrail.removeSegments(0, this.boidTrail.segments.length, true);
-    //   console.log("reached " + rem);  
+   
     //   this.points = [];
     //   }
 
@@ -102,20 +102,27 @@ class Boid {
 class Flocker {
   constructor(paper) {
     this.members = [];
-    for (let i = 0; i < 20; i++) this.members.push(new Boid());
-    console.log("created a flock of  " + Paper.view.size);
+    for (let i = 0; i < 50; i++) this.members.push(new Boid());
+
     Paper.view.onFrame = this.simulate;
-    
+    Paper.view.onMouseMove = this.mouseMove;
+    this.mousePosition =new Paper.Point();
       
+  }
+
+  mouseMove = (event) => {
+    
+    this.mousePosition = event.point;
   }
 
   simulate=()=>
   {
 
+    
     let seprationThreshold = 30;
     let alignmentThreshold = 80;
     let conhensionThreshold = 100;
-    // console.log(this.members.length)
+
     this.members.forEach((e,i) => {
 
       //sepration
@@ -151,9 +158,13 @@ class Flocker {
         
       });
 
+      let md = e.triangle.position.getDistance(this.mousePosition);
+      let mouseSeparation = new Paper.Point(); 
+      if(md<200)
+       mouseSeparation = e.triangle.position.subtract(this.mousePosition).multiply(1 / (1 + md));
       
+      e.velocity = e.velocity.add(mouseSeparation);
       e.velocity =e.velocity.add(sum.multiply(0.02/count));//algin
-    
       e.velocity.add((sumC.multiply(1/countC).subtract(e.triangle.position)).multiply(0.02));//cohension
       e.velocity.length =5 ;
       e.move(e.velocity.multiply(0.3));

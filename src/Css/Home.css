@@ -83,12 +83,12 @@
 #about_me
 {
     width:60%;
-    margin-top:5%;
+    margin-top:10%;
     
     margin-left: auto;
     margin-right: auto;
     font-family: Rubik;
-    font-size:400;
+    font-size:2vh;
     color:#341195;
     background: transparent;
 }
