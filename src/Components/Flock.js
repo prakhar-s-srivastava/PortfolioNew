@@ -102,17 +102,24 @@ class Boid {
 class Flocker {
   constructor(paper) {
     this.members = [];
+    this.clicked = false;
     for (let i = 0; i < 50; i++) this.members.push(new Boid());
 
     Paper.view.onFrame = this.simulate;
     Paper.view.onMouseMove = this.mouseMove;
-    this.mousePosition =new Paper.Point();
+    this.mousePosition = new Paper.Point();
+    Paper.view.onMouseEnter = this.mouseClick;
+    Paper.view.onMouseLeave = (event) =>{this.clicked = false;}
       
   }
 
   mouseMove = (event) => {
     
     this.mousePosition = event.point;
+  }
+  mouseClick = (event) => {
+    this.clicked = true;
+    // console.log(event.point);
   }
 
   simulate=()=>
@@ -160,11 +167,17 @@ class Flocker {
 
       let md = e.triangle.position.getDistance(this.mousePosition);
       let mouseSeparation = new Paper.Point(); 
-      if(md<200)
-       mouseSeparation = e.triangle.position.subtract(this.mousePosition).multiply(1 / (1 + md));
+      if(md<Paper.view.size.width/2.2)
+        mouseSeparation = e.triangle.position.subtract(this.mousePosition).multiply(1 / (1 + md));
       
-      e.velocity = e.velocity.add(mouseSeparation);
-      e.velocity =e.velocity.add(sum.multiply(0.02/count));//algin
+      if(!this.clicked)
+      { e.velocity = e.velocity.add(mouseSeparation); }
+      else
+      {
+        e.velocity = e.velocity.subtract(mouseSeparation);
+        
+      }
+        e.velocity = e.velocity.add(sum.multiply(0.02 / count));//algin
       e.velocity.add((sumC.multiply(1/countC).subtract(e.triangle.position)).multiply(0.02));//cohension
       e.velocity.length =5 ;
       e.move(e.velocity.multiply(0.3));
