@@ -8,7 +8,9 @@ const Canvas = (props) => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    
     Paper.setup(canvas);
+    
     draw1();
   }, []);
 

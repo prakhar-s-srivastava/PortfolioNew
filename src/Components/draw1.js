@@ -1,17 +1,21 @@
 import Paper from "paper";
+import Flocker from "./Flock";
 
 const draw1 = () => {
-  let myPath = new Paper.Path();
 
-  Paper.view.onMouseDown = (event) => {
-    myPath.strokeColor = "black";
-    myPath.strokeWidth = 3;
-  };
+  let a = new Flocker(Paper);
+    //  let myPath = new paper.Path();
 
-  Paper.view.onMouseDrag = (event) => {
-    myPath.add(event.point);
-  };
+    //  paper.view.onMouseEnter = (event) => {
+    //    myPath.strokeColor = "black";
+    //    myPath.strokeWidth = 3;
+    //  };
+    //  paper.view.onMouseMove = (event) => {
+    //    myPath.add(event.point);
+    //    console.log("moving");
+    //  };
 
+  
   Paper.view.draw();
 };
 

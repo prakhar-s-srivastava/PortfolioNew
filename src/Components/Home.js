@@ -2,8 +2,16 @@ import Canvas from "./Canvas";
 import "../Css/Neomorphics.css"
 import "../Css/Home.css"
 import "../Css/Header.css"
+import "../Css/ThreeDSlider.css"
 import prakhar from "../Res/Prakhar.png"
+import prakhar2 from "../Res/Prakhar2.png"
+import prakhar3 from "../Res/Prakhar3.png"
+import prakhar4 from "../Res/Prakhar4.png"
+import prakhar5 from "../Res/Prakhar5.png"
 import logo from "../Res/logo.svg"
+import Crousel from "./Crousel"
+
+
 
 function Home() {
  
@@ -37,7 +45,7 @@ function Home() {
           style={{
             alignSelf: "left",
             float: "right",
-            padding : "1%"
+            padding: "1%",
           }}
         >
           <ul>
@@ -56,10 +64,35 @@ function Home() {
           </ul>
         </div>
       </div>
-      <Canvas />
-      <div className="canvas-div">
-        <div id="image-div" className="neomorphics-up">
-          <img src={prakhar} id="img_prakhar" alt="Italian Trulli"></img>
+      <Canvas  />
+      <div className="canvas-div" style={{
+        background: "transparent",
+        // display:"none"
+      }}>
+        <div>
+          {/* <Crousel image = {prakhar} /> */}
+          <div id="slider" className="image-div">
+            <input type="radio" name="slider" id="s1" />
+            <input type="radio" name="slider" id="s2" />
+            <input type="radio" name="slider" id="s3" defaultChecked />
+            <input type="radio" name="slider" id="s4" />
+            <input type="radio" name="slider" id="s5" />
+            <label htmlFor="s1" id="slide1">
+              <Crousel image={prakhar3} />
+            </label>
+            <label htmlFor="s2" id="slide2">
+              <Crousel image={prakhar2} />
+            </label>
+            <label htmlFor="s3" id="slide3">
+              <Crousel image={prakhar} />
+            </label>
+            <label htmlFor="s4" id="slide4">
+              <Crousel image={prakhar4} />
+            </label>
+            <label htmlFor="s5" id="slide5">
+              <Crousel image={prakhar5} />
+            </label>
+          </div>
         </div>
         <div id="left">
           <div id="intro"> Hi There, I am </div>

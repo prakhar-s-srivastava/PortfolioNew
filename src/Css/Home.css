@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
+
+*{
+    background: transparent;
+}
+
 .canvas-div
 {
     position: absolute;
@@ -15,7 +20,7 @@
 }
 
 
-#image-div
+.image-div
 {
     position: relative;
     height: 90%;
@@ -51,16 +56,17 @@
     font-family: Rubik;
     font-size:3.5vh;
     font-weight: 500;
-    color: #906CDD;
+    color: #071971;
 }
 
 
 #left
 {
     float: right;
-    width:60%;
+    width:58%;
     height:100%;
-    font-size:3vh;  
+    font-size:3vh; 
+    margin-right: 1%; 
 }
 
 
@@ -74,8 +80,9 @@
 
 #about_me
 {
-    width:80%;
+    width:60%;
     margin-top:5%;
+    
     margin-left: auto;
     margin-right: auto;
     font-family: Rubik;
