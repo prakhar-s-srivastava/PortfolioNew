@@ -54,25 +54,25 @@ class Boid {
     if (this.triangle.position.x > Paper.view.size.width)
     {
       rem=true;
-      this.triangle.position = new Paper.Point(0, this.triangle.position.y);
+      this.triangle.position = new Paper.Point(0, Math.random()*this.triangle.position.y);
     }
      if (this.triangle.position.y > Paper.view.size.height) {
        rem = true;
-       this.triangle.position = new Paper.Point(this.triangle.position.x, 0);
+       this.triangle.position = new Paper.Point(Math.random()*this.triangle.position.x, 0);
     }
     
      if (this.triangle.position.x <0) {
        rem = true;
        this.triangle.position = new Paper.Point(
          Paper.view.size.width,
-         this.triangle.position.y
+         Math.random()*this.triangle.position.y
        );
     }
     
     if (this.triangle.position.y <0) {
       rem = true;
       this.triangle.position = new Paper.Point(
-        this.triangle.position.x,
+        Math.random()*this.triangle.position.x,
         Paper.view.size.height
       );
     }
