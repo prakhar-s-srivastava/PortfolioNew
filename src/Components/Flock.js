@@ -194,7 +194,7 @@ class Flocker {
         e.velocity = e.velocity.add(sum.multiply(0.02 / count));//algin
       e.velocity.add((sumC.multiply(1/countC).subtract(e.triangle.position)).multiply(0.02));//cohension
       e.velocity.length = 5;
-      console.log("time" + timeelap);
+      // console.log("time" + timeelap);
       e.move(e.velocity.multiply(0.05 * timeelap));
     });
   }
