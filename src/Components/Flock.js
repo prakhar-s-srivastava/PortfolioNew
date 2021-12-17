@@ -113,6 +113,10 @@ class Flocker {
     console.log("DPI" + Paper.view.viewSize);
     console.log("DPI" + Paper.view.size);
     console.log("Device DPI" + window.innerWidth);
+    if (window.innerWidth / 2 > Paper.view.viewSize.width)
+    {
+         window.location.reload(false);
+      }
       
   }
 
