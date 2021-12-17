@@ -104,6 +104,8 @@ class Flocker {
     this.members = [];
     this.clicked = false;
     for (let i = 0; i < 50; i++) this.members.push(new Boid());
+    this.old = 0;
+    this.new = 0;
 
     Paper.view.onFrame = this.simulate;
     Paper.view.onMouseMove = this.mouseMove;
@@ -131,7 +133,10 @@ class Flocker {
 
   simulate=()=>
   {
-
+    
+    this.new = new Date();
+    var timeelap = this.new - this.old;
+    this.old = this.new;
     
     let seprationThreshold = 30;
     let alignmentThreshold = 80;
@@ -188,8 +193,9 @@ class Flocker {
       }
         e.velocity = e.velocity.add(sum.multiply(0.02 / count));//algin
       e.velocity.add((sumC.multiply(1/countC).subtract(e.triangle.position)).multiply(0.02));//cohension
-      e.velocity.length =5 ;
-      e.move(e.velocity.multiply(0.3));
+      e.velocity.length = 5;
+      console.log("time" + timeelap);
+      e.move(e.velocity.multiply(0.05 * timeelap));
     });
   }
 }
