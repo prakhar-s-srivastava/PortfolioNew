@@ -88,7 +88,9 @@
     margin-left: auto;
     margin-right: auto;
     font-family: Rubik;
-    font-size:2vh;
+    font-size:2.2vh;
+    word-spacing: 0.3vw;
+    letter-spacing: 0.03vw;
     color:#341195;
     background: transparent;
 }

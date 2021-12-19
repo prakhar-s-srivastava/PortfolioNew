@@ -8,8 +8,10 @@ import prakhar2 from "../Res/Prakhar2.png"
 import prakhar3 from "../Res/Prakhar3.png"
 import prakhar4 from "../Res/Prakhar4.png"
 import prakhar5 from "../Res/Prakhar5.png"
-import logo from "../Res/logo.svg"
+import PicSlideshow from "./PicSlideshow"
 import Crousel from "./Crousel"
+import Header from "./Header";
+
 
 
 
@@ -18,7 +20,7 @@ function Home() {
 
   return (
     <div className="App">
-      <div id="header">
+      {/* <div id="header">
         <div
           style={{
             alignSelf: "left",
@@ -63,15 +65,16 @@ function Home() {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
+     
       <Canvas  />
       <div className="canvas-div" style={{
         background: "transparent",
         // display:"none"
       }}>
         <div>
-          {/* <Crousel image = {prakhar} /> */}
-          <div id="slider" className="image-div">
+           {/* <Crousel image = {prakhar} />  */}
+          {/* <div id="slider" className="image-div">
             <input type="radio" name="slider" id="s1" />
             <input type="radio" name="slider" id="s2" />
             <input type="radio" name="slider" id="s3" defaultChecked />
@@ -92,7 +95,8 @@ function Home() {
             <label htmlFor="s5" id="slide5">
               <Crousel image={prakhar5} />
             </label>
-          </div>
+          </div> */}
+        <PicSlideshow className="iamge-div"/>
         </div>
         <div id="left">
           <div id="intro"> Hi There, I am </div>
