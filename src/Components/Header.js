@@ -27,6 +27,7 @@ function Header(props) {
         <h3
           style={{
             color: "#341195",
+            float: "right",
           }}
         >
           Prakhar Srivastava
@@ -42,19 +43,24 @@ function Header(props) {
       >
         <ul>
           <li
-            className={location.pathname.substring(1) == "" ? "selected" : ""}
+            className={
+              location.pathname.substring(1) == "" ? "selected" : " filler"
+            }
             onClick={() => {
               setPage("Home");
             }}
           >
             <a href="/"> Home</a>
           </li>
-          <li>
+          <li
+            className={
+              location.pathname.substring(1) == "Projects"
+                ? "selected"
+                : " filler"
+            }
+          >
             <a
               href="/Projects"
-              className={
-                location.pathname.substring(1) == "Projects" ? "selected" : ""
-              }
               onClick={() => {
                 setPage("Projects");
               }}
@@ -62,10 +68,22 @@ function Header(props) {
               Projects
             </a>
           </li>
-          <li>
+          <li
+            className={
+              location.pathname.substring(1) == "About"
+                ? "selected"
+                : " filler"
+            }
+          >
             <a> About Me</a>
           </li>
-          <li>
+          <li
+            className={
+              location.pathname.substring(1) == "Contact"
+                ? "selected"
+                : " filler"
+            }
+          >
             <a> Contact</a>
           </li>
         </ul>

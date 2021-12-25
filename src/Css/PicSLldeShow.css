@@ -1,4 +1,4 @@
-img{
+.img{
     -khtml-user-select: none;
     -o-user-select: none;
     -moz-user-select: none;
@@ -35,9 +35,10 @@ img{
         margin-top: auto;
         margin-bottom: auto;
         height:70vh;
-        box-shadow:  11px 11px 14px #888889,
+        box-shadow:  11px 11px 14px #afafb16f,
              -0px -0px 0px #ffffff;
         border-radius: 10px;
+        border: 2px solid #341195;
         /* width:30vw; */
          
 
@@ -46,15 +47,16 @@ img{
 .image1
 { 
     z-index: -1;
-    transform: perspective(200px) translate3d(-30%,0,-60px);
+    transform: perspective(200px) translate3d(-30%,0,-30px);
 
 }
 .image2
 {
     transform: perspective(200px) translate3d(0%,0,0);
+     
 }
 .image3
 {
-    transform: perspective(200px) translate3d(25%,0,-30px);
+    transform: perspective(200px) translate3d(25%,0,-60px);
     z-index: -1;
 }

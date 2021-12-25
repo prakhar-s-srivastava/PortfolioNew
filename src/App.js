@@ -9,6 +9,7 @@ import Header from "./Components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Projects from "./Components/Projects";
 import { useLocation } from "react-router-dom"; 
+import SideMenu from './Components/SideMenu';
 
 function App() {
 

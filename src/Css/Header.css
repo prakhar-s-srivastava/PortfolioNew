@@ -6,6 +6,7 @@ ul{
     border-radius: 10px;
     transform: translate(-5%, 0%);
     color: #6A41AC;
+     /* color:white; */
 }
 
 li {
@@ -17,14 +18,17 @@ li a {
     background-color: transparent;
   display: block;
   color: #6A41AC;
+  transition: all 0.5s ease;
   text-align: center;
   padding: 16px;
   text-decoration: none;
 
 }
 .selected {
-      border-radius: 12px;
-  box-shadow: 0 10px 0 0 #6A41AC;
+      border-radius: 5px;
+      box-shadow: inset 2px 2px 5px #c2c2c5,
+            inset -2px -2px 5px #ffffff;
+       color: #6A41AC;
 }
 
 #header
@@ -47,4 +51,23 @@ li a {
             border-radius: 10px;
             margin-bottom: 5%;
             
+}
+
+.filler{
+  border-radius: 5px;
+  box-shadow:  0 -0px 0 -0px #6A41AC;
+  transition: all 0.5s ease;
+  color:white;
+
+}
+
+.filler:hover{
+    box-shadow:  7px 7px 10px #afafb16f,
+             -7px -7px 10px #ffffff;
+    color:white;
+    transition: all 0.3s ease;
+}
+
+li a:hover{
+  color:#330e6e;
 }

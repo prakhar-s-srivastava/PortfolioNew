@@ -102,7 +102,7 @@ class Boid {
 class Flocker {
   constructor(paper) {
     this.members = [];
-    this.clicked = false;
+    this.clicked = true;
     for (let i = 0; i < 50; i++) this.members.push(new Boid());
     this.old = 0;
     this.new = 0;

@@ -11,7 +11,7 @@ import prakhar5 from "../Res/Prakhar5.png"
 import PicSlideshow from "./PicSlideshow"
 import Crousel from "./Crousel"
 import Header from "./Header";
-
+import SideMenu from "./SideMenu";
 
 
 
@@ -66,14 +66,19 @@ function Home() {
           </ul>
         </div>
       </div> */}
-     
-      <Canvas  />
-      <div className="canvas-div" style={{
-        background: "transparent",
-        // display:"none"
-      }}>
+
+      <SideMenu/>
+
+      <Canvas />
+      <div
+        className="canvas-div"
+        style={{
+          background: "transparent",
+          // display:"none"
+        }}
+      >
         <div>
-           {/* <Crousel image = {prakhar} />  */}
+          {/* <Crousel image = {prakhar} />  */}
           {/* <div id="slider" className="image-div">
             <input type="radio" name="slider" id="s1" />
             <input type="radio" name="slider" id="s2" />
@@ -96,7 +101,7 @@ function Home() {
               <Crousel image={prakhar5} />
             </label>
           </div> */}
-        <PicSlideshow className="iamge-div"/>
+          <PicSlideshow className="iamge-div" />
         </div>
         <div id="left">
           <div id="intro"> Hi There, I am </div>
@@ -106,10 +111,25 @@ function Home() {
           <div id="about_me">
             I love creating and innovating. Fond of interactive technologies
             since the begnning I have worked on Game Development, Computer
-            Graphics and Machine Lerning. During my collage years at IIT Roorkee
+            Graphics and Machine Lerning. During my collage years.
             I was part of clubs and societies like Design Studio and Dramatics
             pushing me forward towards innovation and a creative lifestyle.
+            
           </div>
+          <button
+            style={{
+              marginTop: "5%",
+              fontSize: "2vh",
+              padding: "2%",
+              borderRadius: "10px",
+              borderColor: "#341195",
+              color: "white",
+              backgroundColor: "#341195",
+            
+            }}
+          >
+            Learn More
+          </button>
         </div>
       </div>
     </div>

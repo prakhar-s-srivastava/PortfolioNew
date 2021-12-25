@@ -5,8 +5,14 @@
 .neomorphics-up{
     border-radius: 10px;
 background: #F0F0F3;
-box-shadow:  11px 11px 14px #afafb1,
+box-shadow:  11px 11px 14px #afafb16f,
              -11px -11px 14px #ffffff;
+}
+.neomorphics-up-small{
+border-radius: 7px;
+background: #F0F0F3;
+box-shadow:  7px 7px 10px #afafb16f,
+             -7px -7px 10px #ffffff;
 }
 
 .neomorphics-down{
@@ -15,3 +21,11 @@ background: #F0F0F3;
 box-shadow: inset 2px 2px 5px #c2c2c5,
             inset -2px -2px 5px #ffffff;
 }
+
+.neomorphics-round{
+    border-radius: 50%;
+background: #F0F0F3;
+ box-shadow:  3px 3px 5px #3d3d3d57,
+             -3px -3px 5px #ffffff;
+}
+

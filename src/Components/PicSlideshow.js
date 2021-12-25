@@ -6,7 +6,7 @@ import prakhar4 from "../Res/Prakhar4.png";
 import prakhar5 from "../Res/Prakhar5.png";
 import "../Css/Home.css"
 import { useState, useEffect } from "react";
-import "../Css/Neomorphics.css"
+import "../Css/Neomorphics.css" 
 
 let class2 = "image2";
 let class1 = "image1";
@@ -23,20 +23,20 @@ export default  function PicSlideShow()
            setImage2(class2);
         //  setImage1(class2);
         //    console.log(class1);
-       }, 4000);
+       }, 1500);
     });
 
     return (
       <div>
         <div id="mainDiv" className="image-div">
           <div className={"inside  " + class1}>
-            <img src={prakhar}></img>
+            <img className="img" src={prakhar}></img>
           </div>
           <div id={class2} className={"inside " + class2}>
-            <img src={prakhar2}></img>
+            <img className="img" src={prakhar2}></img>
           </div>
           <div id={class3} className={"inside " + class3}>
-            <img src={prakhar3}></img>
+            <img className="img"  src={prakhar3}></img>
           </div>
         </div>
       </div>
