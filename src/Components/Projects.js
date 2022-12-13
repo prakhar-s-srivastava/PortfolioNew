@@ -10,6 +10,7 @@ import Ql from "../Res/Qlearning.png"
 import filter from "../Res/Filter.png"
 import imgrec from "../Res/ImgRecog.png"
 import render from "../Res/export_img.png"
+import portfolio from "../Res/PortfolioWebsite.png"
 function Projects()
 {
 
@@ -133,10 +134,12 @@ function Projects()
               ProjectImage={render}
             />
             <FlippingCard
-              ProjectName="Dummy"
-              ProjectSummary="Dummy Summary"
-              ProjectDescription="Dummy Description"
-              ProjectImage={dummy}
+              ProjectName="PortfolioWebsite using Three-JS and webGL"
+              ProjectSummary="This Portfolio website was made usng ThreeJs and concepts of Webgl which is very similar to mordern Opengl"
+              ProjectDescription="The main assets and models were self created  using Blender from 'Jelly-Virus animation' to 'scroll to play animation'  taking inspiration from various website like 'Apple airpod'
+              the majority of the website is self coded and used HTML , CSS, Javascript and BootsTrap. The website is created static so that it can be uploaded on github. "
+              Link="https://boldhonor.github.io/MyPortfolio/"
+              ProjectImage={portfolio}
             />
             <FlippingCard
               ProjectName="Dummy"
