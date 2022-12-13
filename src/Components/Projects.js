@@ -141,12 +141,7 @@ function Projects()
               Link="https://boldhonor.github.io/MyPortfolio/"
               ProjectImage={portfolio}
             />
-            <FlippingCard
-              ProjectName="Dummy"
-              ProjectSummary="Dummy Summary"
-              ProjectDescription="Dummy Description"
-              ProjectImage={dummy}
-            />
+          
           </div>
         </div>
       </div>
