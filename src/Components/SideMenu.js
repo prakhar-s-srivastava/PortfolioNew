@@ -10,7 +10,7 @@ export default function  ()
     return (
       <div className=" sideMenu">
         <div className="neomorphics-round">
-          <a>
+          <a >
             <img className="SidemenuImage eff1  eff2" src={instagram}></img>
           </a>
         </div>
