@@ -116,6 +116,7 @@ function Home() {
             pushing me forward towards innovation and a creative lifestyle.
             
           </div>
+          <a href="/Projects">
           <button
             style={{
               marginTop: "5%",
@@ -125,11 +126,12 @@ function Home() {
               borderColor: "#341195",
               color: "white",
               backgroundColor: "#341195",
-            
+              
             }}
-          >
+            >
             Learn More
           </button>
+            </a>
         </div>
       </div>
     </div>

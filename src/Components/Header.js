@@ -84,7 +84,7 @@ function Header(props) {
                 : " filler"
             }
           >
-            <a> Contact</a>
+            <a href ="https://boldhonor.github.io/MyPortfolio/Conatct.html" target="blank"> Contact</a>
           </li>
         </ul>
       </div>
