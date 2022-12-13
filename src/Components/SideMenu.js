@@ -20,7 +20,7 @@ export default function  ()
           </a>
         </div>
         <div className="neomorphics-round">
-          <a href="www.linkedin.com/in/prakharsrivastavagamedeveloper" target="blank">
+          <a href="https://www.linkedin.com/in/prakharsrivastavagamedeveloper/" target="blank">
             <img className="SidemenuImage eff1  eff2" src={linkedin}></img>
           </a>
         </div>
