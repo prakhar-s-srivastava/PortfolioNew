@@ -110,8 +110,8 @@ function Home() {
           </div>
           <div id="about_me">
             I love creating and innovating. Fond of interactive technologies
-            since the begnning I have worked on Game Development, Computer
-            Graphics and Machine Lerning. During my collage years.
+            since the beginning I have worked on Game Development, Computer
+            Graphics and Machine Learning. During my college years.
             I was part of clubs and societies like Design Studio and Dramatics
             pushing me forward towards innovation and a creative lifestyle.
             
