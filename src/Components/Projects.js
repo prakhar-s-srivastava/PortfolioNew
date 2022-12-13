@@ -23,11 +23,30 @@ function Projects()
           background: "transparent !important",
           top: "20%",
           left: "10%",
-          fontSize: "3rem"
+          fontSize: "3rem",
           // transform: "translate(-50%, -50%)",
         }}
       >
+        <h1
+        style={{
+          
+          width: " 100%",
+          background: "transparent !important",
+          top: "20%",
+          left: "10%",
+          fontSize: "2rem",
+          color:"white",
+          backgroundColor:"#341195",
+          // padding:"0.3rem",
+          borderRadius:"6px",
+          paddingBottom:"0.5rem"
+
+          // transform: "translate(-50%, -50%)",
+        }}
+        >
+          
         Projects
+        </h1>
         <div
           style={{
             marginTop: "5%",
