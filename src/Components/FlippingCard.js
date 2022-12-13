@@ -38,6 +38,15 @@ export default function  FlippingCard( props)
            </div>
            <div className="flip-card-back neomorphics-up-small">
              <p>{props.ProjectDescription}</p>
+
+             <a href={props.Link} target="blank"> <button className=" " style={{
+              width:"50%",
+              padding:"1rem",
+              backgroundColor:"#341195",
+              borderRadius:"10px",
+              color:"white",
+              border:"none"
+             }}>Visit</button> </a>
            </div>
          </div>
        </div>

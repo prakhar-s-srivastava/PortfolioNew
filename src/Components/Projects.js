@@ -1,5 +1,8 @@
 import FlippingCard from "./FlippingCard";
 import dummy from "../Res/demo.jpg";
+import mocap from "../Res/mocap.png"
+import mocapunity from "../Res/mocapunity.png"
+
 
 function Projects()
 {
@@ -13,6 +16,7 @@ function Projects()
           background: "transparent !important",
           top: "20%",
           left: "10%",
+          fontSize: "3rem"
           // transform: "translate(-50%, -50%)",
         }}
       >
@@ -32,16 +36,17 @@ function Projects()
             }}
           >
             <FlippingCard
-              ProjectName="Dummy"
-              ProjectSummary="Dummy Summary"
-              ProjectDescription="Dummy Description"
-              ProjectImage={dummy}
+              ProjectName="Mocap Animation"
+              ProjectSummary="Mocation captiure from video "
+              ProjectDescription="Using a video to extract animation to be used in unity and blender"
+              Link="https://youtu.be/AB7tSxjcvNM"
+              ProjectImage={mocap}
             />
             <FlippingCard
               ProjectName="Dummy"
               ProjectSummary="Dummy Summary"
               ProjectDescription="Dummy Description"
-              ProjectImage={dummy}
+              ProjectImage={mocapunity}
             />
             <FlippingCard
               ProjectName="Dummy"
