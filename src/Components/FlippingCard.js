@@ -13,15 +13,15 @@ export default function  FlippingCard( props)
                src={props.ProjectImage}
                alt="Avatar"
                style={{
-                 maxHeight: "60%",
-                 maxWidth: "100%",
-                 width: "auto",
+                 height: "60%",
+                 width: "90%",
+                //  width: "auto",
                }}
              />
              <div
                style={{
                  color: "#341195",
-                 fontSize: "150%",
+                 fontSize: "1rem",
                }}
              >
                <b>{props.ProjectName}</b>{" "}
@@ -43,9 +43,19 @@ export default function  FlippingCard( props)
               width:"50%",
               padding:"1rem",
               backgroundColor:"#341195",
-              borderRadius:"10px",
+              borderRadius:"6px",
               color:"white",
-              border:"none"
+              border:"none",
+              top:"auto",
+              position:"absolute",
+              margin:"auto",
+              left:"auto",
+              right:"auto",
+              alignSelf:"center", 
+              left:"50%",
+              right:"50%",
+              transform:"translate(-50%,-50%)",
+              bottom:"2%"
              }}>Visit</button> </a>
            </div>
          </div>
