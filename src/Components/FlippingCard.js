@@ -15,6 +15,7 @@ export default function  FlippingCard( props)
                style={{
                  height: "60%",
                  width: "90%",
+                objectFit: "contain"
                 //  width: "auto",
                }}
              />

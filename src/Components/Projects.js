@@ -10,10 +10,20 @@ import Ql from "../Res/Qlearning.png"
 import filter from "../Res/Filter.png"
 import imgrec from "../Res/ImgRecog.png"
 import render from "../Res/export_img.png"
+import clothGeneration from "../Res/customClothes.png"
 import portfolio from "../Res/PortfolioWebsite.png"
+import selfieToavatar from '../Res/selfieToavatar.png'
+import flamMocap from '../Res/flamMocap.png'
+import imageTracking from '../Res/imageTracking.png'
+import masstune from '../Res/masstune.png'
+import recloth1 from "../Res/recloth1.png"
+import recloth2 from "../Res/recloth2.png"
+import recloth3 from "../Res/recloth3.png"
+import imgComp from '../Res/ImageCompsition.jpeg'
+
+
 function Projects()
 {
-
 
     return (
       <div
@@ -62,6 +72,95 @@ function Projects()
             }}
           >
             <FlippingCard
+              ProjectName="Cloth Design Generation"
+              ProjectSummary=" Use Gen AI for cloth generation for avatar"
+              ProjectDescription=" Use Gen AI for cloth generation for avatar, the cloths are generated on a particular UV map, depending on cloth style and type"
+              Link="https://flamapp.ai/avatars"
+              ProjectImage={clothGeneration}
+            />
+            <FlippingCard
+              ProjectName="Use Selfie to create a look-A-like avatar"
+              ProjectSummary="White-Box algorithm to generate avatar faces according to selfie"
+              ProjectDescription="We used white-box fixed blend shape based 3d face generator to generate the faces from selfie, from an analysis of faces and parts-of-face types and categories"
+              ProjectImage={selfieToavatar}
+              Link="https://flamapp.ai/avatars"
+            />
+            <FlippingCard
+              ProjectName=" Almost Realtime motion cature, using a a set of algorithms "
+              ProjectSummary="Used non-standard quaternion and 3d space prediction to re-create motion in a virtual enviroment "
+              ProjectDescription="Used non-standard quaternion and 3d space prediction to re-create motion in a virtual enviroment "
+              Link="https://flamapp.ai/mocap"
+              ProjectImage={flamMocap}
+            />
+            <FlippingCard
+              ProjectName="Light weight image tracker"
+              ProjectSummary="This a very light weight image tracker"
+              ProjectDescription=" This is a very light weight image tracker (~200kb), that ran on edge"
+              Link="https://brandequity.economictimes.indiatimes.com/news/marketing/britannia-unveils-ai-powered-camera-campaign-for-nutrichoice-with-ranveer-singh/108650822"
+              ProjectImage={imageTracking}
+            />
+          </div>
+          <div
+          style={{
+            marginTop: "5%",
+            // padding: "5%"
+          }}
+          className=" "
+        >
+
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <FlippingCard
+              ProjectName="Masstune"
+              ProjectSummary=" Mass croping, whitebalancing, tilt fixing and much more "
+              ProjectDescription="We used severel AI models to process images in mass, for photographers in USA"
+              Link="https://masstune.xyz/"
+              ProjectImage={masstune}
+            />
+            <FlippingCard
+              ProjectName="AI cloth changer "
+              ProjectSummary="It uses AI to change cloths of a person "
+              ProjectDescription="This project was a combination of inpainting, Lora and cloth matting"
+              ProjectImage={recloth1}
+              Link={recloth2 }
+            />
+            <FlippingCard
+              ProjectName="Double Hand Tracking in VR "
+              ProjectSummary="Both hand Tracking in VR using Mediapie-hands"
+              ProjectDescription="Tracking both hands using Mediapipe hands and in VR without Google Cardboard "
+              Link="https://youtu.be/Xuv-G2d9JYM"
+              ProjectImage={imgComp}
+            />
+            <FlippingCard
+              ProjectName="Portable Game Maker"
+              ProjectSummary="Portble Game Maker(Maker -OpenGL3.0 , Game -BGFX)"
+              ProjectDescription=" Game Maker Works on Opengl but uses seprate libraries for object management and physics which can be seperately used while exporting game, it can use separate Graphics-api for running games.
+                  It makes  it easier to move to 'Vukan' or 'Metal' ."
+              Link="https://boldhonor.github.io/MyPortfolio/Project%20Descriptions/Portble%20Game%20Maker.html"
+              ProjectImage={gamemaker}
+            />
+          </div>
+          </div>
+          <div
+          style={{
+            marginTop: "5%",
+            // padding: "5%"
+          }}
+          className=" "
+        >
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <FlippingCard
               ProjectName="Mocap Animation"
               ProjectSummary="Mocation captiure from video "
               ProjectDescription="Using a video to extract animation to be used in unity and blender"
@@ -90,6 +189,7 @@ function Projects()
               Link="https://boldhonor.github.io/MyPortfolio/Project%20Descriptions/Portble%20Game%20Maker.html"
               ProjectImage={gamemaker}
             />
+          </div>
           </div>
 
           <div
