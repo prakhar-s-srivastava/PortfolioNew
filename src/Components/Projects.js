@@ -130,8 +130,8 @@ function Projects()
               Link={recloth2 }
             />
             <FlippingCard
-              ProjectName="Composing an to be consistent "
-              ProjectSummary="This is AI model that merges 2 images."
+              ProjectName="Composing an Image to be consistent "
+              ProjectSummary="This is an AI model that merges 2 images."
               ProjectDescription=" Makes 2 images look like they have shot from same camera and perspective regardless or lighting and camera conditions "
               Link="https://youtu.be/Xuv-G2d9JYM"
               ProjectImage={imgComp}
