@@ -55,7 +55,7 @@ function Projects()
         }}
         >
           
-        Projects
+        Projects(Solo or Lead)
         </h1>
         <div
           style={{
