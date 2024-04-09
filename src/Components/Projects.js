@@ -130,9 +130,9 @@ function Projects()
               Link={recloth2 }
             />
             <FlippingCard
-              ProjectName="Double Hand Tracking in VR "
-              ProjectSummary="Both hand Tracking in VR using Mediapie-hands"
-              ProjectDescription="Tracking both hands using Mediapipe hands and in VR without Google Cardboard "
+              ProjectName="Composing an to be consistent "
+              ProjectSummary="This is AI model that merges 2 images."
+              ProjectDescription=" Makes 2 images look like they have shot from same camera and perspective regardless or lighting and camera conditions "
               Link="https://youtu.be/Xuv-G2d9JYM"
               ProjectImage={imgComp}
             />
